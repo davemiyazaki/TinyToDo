@@ -6,8 +6,8 @@ const ToDoItem = () =>{
       </div>
 
 
-      <div className="h-full w-full box-border p-1 justify-center" id="toDoName"> 
-        <span className = "h-full" > To-Do Component </span>
+      <div className="flex h-full w-full box-border p-1 items-center" id="toDoName"> 
+        <span className = "" > To-Do Component </span>
       </div>
     </div>
   );
