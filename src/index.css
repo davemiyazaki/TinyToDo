@@ -1,12 +1,30 @@
 @import 'tailwindcss';
 :root {
-  font-family: Arial;
+  font-family: "Nunito", sans-serif;
 
   color:#242424;
   background-color: rgba(255, 255, 255, 0.87);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+
+/*---------FONTS---------*/
+.nunito-sans-sm{
+  font-family: "Nunito", "Times New Roman", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.nunito-sans-md {
+  font-family: "Quicksand", "Times New Roman", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.nunito-sans-bl {
+  font-family: "Nunito", "Times New Roman", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
