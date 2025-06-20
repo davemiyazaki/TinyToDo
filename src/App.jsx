@@ -1,5 +1,5 @@
 import './App.css'
-import ToDoList from "./components/Todo.jsx"
+import ToDoList from "./components/ToDoList.jsx"
 import EntryField from "./components/EntryField";
 
 function App() {

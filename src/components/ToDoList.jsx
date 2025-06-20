@@ -1,10 +1,8 @@
 import ToDoItem from "./ToDoItem"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 
 
-
-const toDoList = ["Task 1", "Task 2", "Task 3"]
 
 const clearInput = (input) => {
   if(input){
@@ -14,17 +12,18 @@ const clearInput = (input) => {
   }
 }
 
-const addToDoItem = () =>{
-  console.log("addToDoItem is in process");
 
-  const targetDiv =document.getElementById("ToDoList_main");
-  createRoot(targetDiv).render(toDoList.map(item=>(<ToDoItem name={item}/>)));
-}
 
 const ToDoList = () => {
+  const [toDoList, setToDoList] = useState(["Task 1", "Task 2", "Task 3"]);
+// work on adding new element eaach time and not only ONCE
+  const addToDoItem = () =>{
+    console.log("addToDoItem is in process");
+    setToDoList([...toDoList, "Brand New Item"]);
+  }
+
   useEffect(() => {
   const entryField = document.getElementById("EntryField_input");
-
   entryField.addEventListener("keydown", 
       (e)=>{
         const value = e.target.value; 
@@ -38,7 +37,7 @@ const ToDoList = () => {
 
   return(
     <div className="flex flex-col w-full" id="ToDoList_main">
-    <ToDoItem/>
+      {toDoList.map((item, idx) =>(<ToDoItem name={item}/>))}
     </div>
   );
 }
