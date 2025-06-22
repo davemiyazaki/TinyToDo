@@ -1,6 +1,5 @@
 import ToDoItem from "./ToDoItem"
 import { useEffect, useState } from "react";
-import { createRoot } from "react-dom/client";
 
 
 
@@ -17,9 +16,9 @@ const clearInput = (input) => {
 const ToDoList = () => {
   const [toDoList, setToDoList] = useState(["Task 1", "Task 2", "Task 3"]);
 // work on adding new element eaach time and not only ONCE
-  const addToDoItem = () =>{
+  const addToDoItem = (input) =>{
     console.log("addToDoItem is in process");
-    setToDoList([...toDoList, "Brand New Item"]);
+    setToDoList([...toDoList, input]);
   }
 
   useEffect(() => {
@@ -30,14 +29,14 @@ const ToDoList = () => {
         if(e.code === "Enter" && value != ""){
           console.log(value)
           clearInput(entryField);
-          addToDoItem();
+          addToDoItem(value);
         }
       });
   },[]);
 
   return(
     <div className="flex flex-col w-full" id="ToDoList_main">
-      {toDoList.map((item, idx) =>(<ToDoItem name={item}/>))}
+      {toDoList.map((item)=>(<ToDoItem name={item}/>))}
     </div>
   );
 }
