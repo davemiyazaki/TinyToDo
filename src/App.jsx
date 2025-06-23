@@ -5,7 +5,7 @@ import EntryField from "./components/EntryField";
 function App() {
 
   return (
-    <div className='w-80 h-96 bg-amber-50' id = "main">
+    <div className='w-80 h-96 bg-amber-50/20 ' id = "main">
       <EntryField/>
       <ToDoList/>
     </div>
