@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem"
 import { useEffect, useState } from "react";
-
+import {v4 as uuidv4} from 'uuid'
 
 
 const clearInput = (input) => {
@@ -14,11 +14,12 @@ const clearInput = (input) => {
 
 
 const ToDoList = () => {
-  const [toDoList, setToDoList] = useState(["Task 1", "Task 2", "Task 3"]);
+  const [toDoList, setToDoList] = useState([]);
 // work on adding new element eaach time and not only ONCE
   const addToDoItem = (input) =>{
     console.log("addToDoItem is in process");
-    setToDoList([...toDoList, input]);
+    const newList = toDoList.concat({input, id: uuidv4()});
+    setToDoList(newList);
   }
 
   useEffect(() => {
@@ -36,7 +37,7 @@ const ToDoList = () => {
 
   return(
     <div className="flex flex-col w-full" id="ToDoList_main">
-      {toDoList.map((item)=>(<ToDoItem name={item}/>))}
+      {toDoList.map((item)=>(<ToDoItem name={item.name} key={item.id}/>))}
     </div>
   );
 }
