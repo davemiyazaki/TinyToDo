@@ -15,11 +15,9 @@ const clearInput = (input) => {
 
 const ToDoList = () => {
   const [toDoList, setToDoList] = useState([]);
-// work on adding new element eaach time and not only ONCE
   const addToDoItem = (input) =>{
     console.log("addToDoItem is in process");
     console.log(input);
-    const newList = toDoList.concat({name: input, id: uuidv4()});
     setToDoList(toDoList => toDoList.concat({name: input, id: uuidv4()}));
   }
 
@@ -38,7 +36,7 @@ const ToDoList = () => {
 
   return(
     <div className="flex flex-col w-full" id="ToDoList_main">
-      {toDoList.map((item)=>(<ToDoItem name={item.name} key={item.id}/>))}
+      {toDoList.map((item)=>(<ToDoItem name={item.name} check_key={item.id} key='0' />))}
     </div>
   );
 }
