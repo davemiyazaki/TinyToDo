@@ -18,8 +18,9 @@ const ToDoList = () => {
 // work on adding new element eaach time and not only ONCE
   const addToDoItem = (input) =>{
     console.log("addToDoItem is in process");
-    const newList = toDoList.concat({input, id: uuidv4()});
-    setToDoList(newList);
+    console.log(input);
+    const newList = toDoList.concat({name: input, id: uuidv4()});
+    setToDoList(toDoList => toDoList.concat({name: input, id: uuidv4()}));
   }
 
   useEffect(() => {
