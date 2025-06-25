@@ -3,16 +3,16 @@ import "./toDoItem.css";
 const ToDoItem = ( {name = "_untitled_item", check_key = "hello" }) =>{
 
   const [toDoState, setToDoState] = useState(0);
+
   const handleClick = (target) =>{
         console.log("Item is clicked");
         setToDoState(prevState => prevState === 0 ? 1 : 0);
         console.log("current state: " + toDoState);
         console.log("id of the object is " + target.getAttribute("class"));
         toDoState == 0 ? target.classList.add("__checked") : target.classList.remove("__checked");
+        
+        
       };
-  useEffect(()=>{
-    const todoImage = document.getElementById("toDoItem_check_image");  
-  },[toDoState, setToDoState]);
       
   return(
     <div className=" p-0 px-4 grid grid-cols-[10%_90%] w-full h-fit text-sm" 
@@ -23,7 +23,7 @@ const ToDoItem = ( {name = "_untitled_item", check_key = "hello" }) =>{
       </div>
 
       <div className="flex h-full w-full box-border items-center nunito-sans-md" id="toDoItem_name"> 
-        <span className = "" > {name} </span>
+        <span className = {toDoState ? "opacity-50" : ""} > {name} </span>
       </div>
     </div>
   );
