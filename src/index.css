@@ -1,30 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
-:root {
-  font-family: "Nunito", sans-serif;
 
+@theme {
+  --color-text: hsl(221 25% 27%);
+  --color-background: hsl(240 20% 99%);
+  --color-primary: hsl(229 86% 70%);
+  --color-secondary: hsl(211 100% 94%);
+  --color-accent: hsl(354 83% 66%);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
   color:#242424;
   background-color: rgba(255, 255, 255, 0.87);
 
 }
 
-/*---------FONTS---------*/
-.nunito-sans-sm{
-  font-family: "Nunito", "Times New Roman", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.nunito-sans-md {
-  font-family: "Quicksand", "Times New Roman", sans-serif;
-  font-weight: 550;
-  font-style: normal;
-}
-
-.nunito-sans-bl {
-  font-family: "Nunito", "Times New Roman", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+#root{
+  font-family: "Archivo", "Times New Roman";
 }
 
