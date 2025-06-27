@@ -3,3 +3,6 @@
  content:image-set("/public/checked-todo-icon.svg");
 }
 
+.__grid-cols-fitContent-1fr {
+  grid-template-columns: fit-content(5%) 1fr;
+}

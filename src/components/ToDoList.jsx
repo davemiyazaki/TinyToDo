@@ -36,7 +36,7 @@ const ToDoList = () => {
 
   return(
     <div className="flex flex-col w-full" id="ToDoList_main">
-      {toDoList.map((item)=>(<ToDoItem name={item.name} check_key={item.id} key='0' />))}
+      {toDoList.map((item)=>(<ToDoItem name={item.name} check_key={item.id} key={item.id} />))}
     </div>
   );
 }

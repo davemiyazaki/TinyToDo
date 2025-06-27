@@ -15,14 +15,14 @@ const ToDoItem = ( {name = "_untitled_item", check_key = "hello" }) =>{
       };
       
   return(
-    <div className="grid grid-cols-[10%_90%] w-full h-fit" 
+    <div className="grid w-full h-fit __grid-cols-fitContent-1fr gap-x-[4px] mb-2" 
           id="toDoItem_main"
           >
       <div className= "flex justify-center items-center box-border h-full w-full" id="toDoItem_check">
         <img className="object-cover " src="/todo-icon.svg" id={check_key} key={check_key} onClick={(e) => handleClick(e.target)}/>
       </div>
 
-      <div className="flex h-full w-full box-border items-center font-medium" id="toDoItem_name"> 
+      <div className="flex h-fit w-full box-border items-center font-medium leading-[normal]" id="toDoItem_name"> 
         <span className = {toDoState ? "opacity-50" : ""} > {name} </span>
       </div>
     </div>
