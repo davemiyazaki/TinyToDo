@@ -20,7 +20,7 @@ const ToDoItem = ( {name = "_untitled_item", check_key = undefined }) =>{
           >
         <img className="object-cover " src="/todo-icon.svg" id={check_key} key={check_key} onClick={(e) => handleClick(e.target)}/>
       <div className="flex h-fit w-full box-border items-center font-medium leading-[normal]" id="toDoItem_name"> 
-        <span className = {toDoState ? "opacity-50" : ""} > {name} </span>
+        <span className = {toDoState ? "opacity-50 text-accent" : ""} > {name} </span>
       </div>
     </div>
   );
