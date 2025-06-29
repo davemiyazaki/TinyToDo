@@ -12,7 +12,21 @@ const ClearButton = () => {
   }
 
   return(
-    <button className="border-none w-12 bg-accent text-white" onClick={ClearList}>Clear</button>
+  <div className=" w-full flex justify-end" >
+    <button className="
+        border-none rounded-[16px] px-7 py-3 tracking-[0.0525rem] font-bold 
+        transition ease-out duration-500 shadow-lg 
+        bg-text text-secondary 
+        active:shadow-lg
+        active:bg-text
+        hover:shadow-xl 
+        hover:bg-text-dark" 
+        onClick={ClearList}>
+
+        Clear
+
+      </button>
+  </div>
   );
 }
 

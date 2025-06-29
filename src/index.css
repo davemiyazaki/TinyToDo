@@ -3,9 +3,11 @@
 
 @theme {
   --color-text: hsl(200 30% 26%);
+  --color-text-dark: hsl(200 30% 16%);
+  --color-text-light: hsl(200 30% 36%);
   --color-background: hsl(240 20% 99%);
   --color-primary: hsl(229 86% 70%);
-/*  --color-secondary: hsl(200 30% 26%);*/
+  --color-secondary:hsla(211, 100%, 94%, 1); 
   --color-accent: hsl(354 83% 66%);
 }
 
