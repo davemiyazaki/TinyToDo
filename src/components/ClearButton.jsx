@@ -6,7 +6,7 @@ const ClearButton = () => {
     console.log(list)
 
     if(list.length == 0){
-      console.log("There are no completed tasks");
+      alert("There are No Completed Tasks to Clear.");
       return;
     }
 
