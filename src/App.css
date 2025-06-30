@@ -8,3 +8,7 @@
   align-items: center;
 }
 
+#main{
+  align-items:flex-end;
+}
+
