@@ -5,7 +5,7 @@ import ClearButton from "./components/ClearButton.jsx";
 function App() {
 
   return (
-    <div className='w-80 h-96 bg-background border-text/50 border rounded-[24px] text-text pt-8 p-6 text-xs tracking-tight' id = 'main'>
+    <div className='flex flex-col content-end w-80 h-96 bg-background border-text/50 border rounded-[24px] text-text pt-8 p-6 text-xs tracking-tight' id = 'main'>
       <EntryField/>
       <ToDoList/>
       <ClearButton/>
