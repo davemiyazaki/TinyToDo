@@ -6,9 +6,12 @@ const ToDoItem = ( {name = "_untitled_item", check_key = undefined }) =>{
 
   const handleClick = (target) =>{
         console.log("Item is clicked");
-        setToDoState(prevState => prevState === 0 ? 1 : 0);
+
+        setToDoState(prevState => prevState === 0 ? 1 : 0);// follows the rule of bit --> 0 - off, 1 - on
+
         console.log("current state: " + toDoState);
         console.log("id of the object is " + target.getAttribute("class"));
+
         toDoState == 0 ? target.classList.add("__checked") : target.classList.remove("__checked");
       };
   return(
