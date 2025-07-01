@@ -1,5 +1,6 @@
 import {useEffect, useState, useRef} from 'react';
 import "./toDoItem.css";
+
 const ToDoItem = ( {name = "_untitled_item", check_key = undefined }) =>{
   const myRef = useRef(null);
   const [toDoState, setToDoState] = useState(0);
@@ -8,7 +9,6 @@ const ToDoItem = ( {name = "_untitled_item", check_key = undefined }) =>{
         console.log("Item is clicked");
 
         setToDoState(prevState => prevState === 0 ? 1 : 0);// follows the rule of bit --> 0 - off, 1 - on
-
         console.log("current state: " + toDoState);
         console.log("id of the object is " + target.getAttribute("class"));
 
@@ -27,4 +27,6 @@ const ToDoItem = ( {name = "_untitled_item", check_key = undefined }) =>{
   );
 
 }
-export default ToDoItem;
+export {
+  ToDoItem,
+}

@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const ClearButton = () => {
-
   const ClearList = () => {
     console.log("Clear button is clicked");
     const list = document.getElementsByClassName("__checked");
@@ -19,11 +18,10 @@ const ClearButton = () => {
       console.log(list.length);
     }
   }
-
-  const [completedTaskExists, UpdateCompletedTasksExists] = useState(false);
   return(
   <div className=" w-full flex justify-end mt-[auto]" >
     <button className="
+         
         border-none rounded-full px-7 py-3 tracking-[0.0525rem] font-bold 
         transition ease-out duration-300 shadow-lg 
         bg-text text-secondary 
