@@ -1,16 +1,16 @@
 [
   {
-  "name":"Incomplete Task",
+  "name":"Wash Dishes",
   "id":0,
   "isCompleted":false
   },
   {
-  "name":"Incomplete Task 2",
+  "name":"To-Do Item",
   "id":1,
   "isCompleted":false
   },
   {
-  "name":"Incomplete Task 3",
+  "name":"Compile Latest Framework",
   "id":2,
   "isCompleted":false
   }

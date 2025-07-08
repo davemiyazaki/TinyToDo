@@ -22,18 +22,7 @@ const ClearButton = () => {
 
   const [completedTaskExists, UpdateCompletedTasksExists] = useState(false);
   return(
-  <div className=" w-full flex justify-end mt-[auto]" >
-    <button className="
-        border-none rounded-full px-7 py-3 tracking-[0.0525rem] font-bold 
-        transition ease-out duration-300 shadow-lg 
-        bg-text text-secondary 
-        active:bg-text
-        hover:bg-text-dark" 
-        onClick={ClearList}>
-
-        Clear
-
-      </button>
+  <div className=" w-full h-px flex bg-primary">
   </div>
   );
 }
